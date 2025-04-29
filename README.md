@@ -1,66 +1,18 @@
-## Foundry
+#Commands learned 
+1. forge build           : builds up the test and the src file ,according to me 
+2. forge test            : test the tests 
+3. forge test -vvvvv     : detailed test result , the detail is based on number of v's min 1 max 5 , and v means verbosity
+4. forge test --match-path test/counter.sol  : for perticular test file to run 
+5. --gas-report          : gives the gas usage report 
+6. forge fmt             : formates the code 
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-Foundry consists of:
+#Syntax
+1. vm.expectRevert()     : Expects the next call to get revert
+2. import "forge-std/console.sol" : Remember that this file is only to be imported in src folder not test coz Test alredy has this 
+3. vm.expectRevert("")   : Expects the call to fail, and **testFail is been deprecated**
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Documentation
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+#Contracts 
+1. Counter.sol => Basic counter contract with setNumber and increment functions 
