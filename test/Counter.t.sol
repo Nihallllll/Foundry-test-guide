@@ -8,7 +8,7 @@ import "../src/Counter.sol";
 contract CounterTest is Test {
     // Declare an instance of the contract to be tested
     Counter public counter;
-
+    error CannotIncrement();
     // setUp is a special function run before each test case
     function setUp() public {
         // Deploy a new instance of the Counter contract
@@ -38,10 +38,11 @@ contract CounterTest is Test {
 
     // Example of a test that should fail (demonstration)
     // Foundry expects failing tests to be prefixed with "testFail"
-    function testFailIncrementFromNonZero() public {
+    function testIncrementFromNonZero() public {
         counter.setNumber(10);
+        vm.expectRevert(Counter.CannotIncrement.selector);
         counter.increment();
         // This assertion will fail because 11 != 10
-        assertEq(counter.number(), 10, "This assertion should fail");
+        //assertEq(counter.number(), 10, "This assertion should fail");
     }
 }
