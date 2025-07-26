@@ -11,7 +11,7 @@
 1. vm.expectRevert()     : Expects the next call to get revert
 2. import "forge-std/console.sol" : Remember that this file is only to be imported in src folder not test coz Test alredy has this 
 3. vm.expectRevert("")   : Expects the call to fail, and **testFail is been deprecated**
-
+4. test_Revert ===  testFail : but try not to use this much 
 
 
 #Contracts 
